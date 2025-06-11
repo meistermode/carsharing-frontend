@@ -24,7 +24,7 @@ const CarsPage = () => {
 
   const handleBooking = async (carId, startTime, endTime) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/bookings', {
+      const response = await axios.post('http://meistermode-carsharing-backend-7481.twc1.net:8000/api/bookings', {
         car_id: carId,
         start_time: startTime,
         end_time: endTime
@@ -176,7 +176,7 @@ const CarsPage = () => {
         }
 
         setIsLoading(true);
-        const response = await axios.get('http://localhost:8000/api/cars', {
+        const response = await axios.get('http://meistermode-carsharing-backend-7481.twc1.net:8000/api/cars', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }

@@ -219,7 +219,7 @@ const Tariffs = () => {
           ? { 'Authorization': `Bearer ${token}` } 
           : {};
         
-        const response = await axios.get('http://localhost:8000/api/tariffs', { headers });
+        const response = await axios.get('http://meistermode-carsharing-backend-7481.twc1.net:8000/api/tariffs', { headers });
         setTariffs(response.data);
       } catch (err) {
         console.error('Error fetching tariffs:', err);
