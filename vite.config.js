@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8000',
-      '/storage': 'http://localhost:8000'
+      '/api': 'https://meistermode-carsharing-backend-7481.twc1.net:8000',
+      '/storage': 'http://https://meistermode-carsharing-backend-7481.twc1.net:8000'
     }
   }
 });
