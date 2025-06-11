@@ -128,7 +128,7 @@ const BookingModal = ({ isOpen, setIsOpen, car, onBookingSuccess, availableCars 
         total_price: calculatePrice()
       };
 
-      const response = await fetch('http://meistermode-carsharing-backend-7481.twc1.net:8000/api/bookings', {
+      const response = await fetch('https://meistermode-carsharing-backend-7481.twc1.net:8000/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
