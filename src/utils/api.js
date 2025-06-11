@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://meistermode-carsharing-backend-7481.twc1.net:8000', 
+  baseURL: 'https://meistermode-carsharing-backend-7481.twc1.net:8000', 
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
