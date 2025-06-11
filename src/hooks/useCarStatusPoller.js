@@ -9,7 +9,7 @@ const useCarStatusPoller = (cars, setCars) => {
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      const response = await axios.get('https://meistermode-carsharing-backend-7481.twc1.net:8000/api/cars/status', {
+      const response = await axios.get('https://meistermode-carsharing-backend-7481.twc1.net/api/cars/status', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -61,7 +61,7 @@ const useCarStatusPoller = (cars, setCars) => {
       if (!cars || cars.length === 0) return;
 
       try {
-        const response = await axios.get('https://meistermode-carsharing-backend-7481.twc1.net:8000/api/bookings', {
+        const response = await axios.get('https://meistermode-carsharing-backend-7481.twc1.net/api/bookings', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
