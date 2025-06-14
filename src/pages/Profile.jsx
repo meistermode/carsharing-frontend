@@ -36,7 +36,7 @@ const Profile = () => {
         cache: 'force-cache'
       });
       
-      const formattedRides = response.data.map(booking => ({
+      const formattedRides = Array.isArray(response.data) ? response.data.map(booking => ({
         id: booking.id,
         carId: booking.car.id,
         carModel: booking.car.name,
@@ -105,7 +105,7 @@ const Profile = () => {
           cache: 'no-cache' // Принудительно получаем свежие данные
         });
         
-        const updatedFormattedRides = updatedResponse.data.map(booking => ({
+        const updatedFormattedRides = Array.isArray(updatedResponse.data) ? updatedResponse.data.map(booking => ({
           id: booking.id,
           carId: booking.car.id,
           carModel: booking.car.name,
